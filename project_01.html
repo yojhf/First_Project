@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<head>
+    <title>미니게임</title>
+	<link rel="stylesheet" type="text/css" href="./css/reset.css">
+	<link rel="stylesheet" type="text/css" href="./css/def.css">
+    <link rel="stylesheet" type="text/css" href="./css/site_css.css">
+    <link rel="stylesheet" type="text/css" href="./css/p01.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
+	<script src="./js/jquery.min.js"></script>
+    <script src="./js/p01.js"></script>
+    <script src="./js/site_js.js"></script>  
+</head>
+<body>
+    <header class="head_araa"> 
+        <div class="box_style1 dis_f al_c flex_jsb">
+            <h1>MSG</h1>
+            <nav>
+                <ul class="dis_f al_c">
+                    <li>스타일1</li>
+                    <li>스타일2</li>
+                    <li>스타일3</li>
+                </ul>
+                <button class="pc_h md_pop_close">닫기</button>
+            </nav>
+
+            <div class="md_footer pc_h">
+                <p>
+                    유사콜론<br/>
+                    20210478_박성준 | 20210460_윤영준 | 20181060_김수형
+                </p>
+            </div>
+        </div> 
+        <button class="pc_h md_pop_show">메뉴</button>
+    </header>
+
+    <section id="main_section" class="dis_f al_c">
+        <div class="box_style1 play_area_box" id = "game_t1">
+            <div class="play_area">
+                <div class = "layer1 dis_f flex_c" id="game_start">
+
+                    <div>
+                        <h2 class="t_c" id = "st_01">
+                            <span style="color : white;">R</span>
+                            <span style="color: orange;">P</span>
+                            <span style="color: green;">G</span>&nbsp;
+                            정렬게임</h2>
+                        <table  id = "main_imgfiles">
+                            <tr>
+                                <td id = "main_img1"></td>
+                                <td id = "main_img2"></td>
+                                <td id = "main_img3"></td>
+                            <tr>
+                        </table>
+                        <button class="start_btn">GAME START</button>
+                    </div>
+
+                </div>
+                <div class = "layer1" id="game_play" style="display: none;">
+                    <div class = "game_view">
+                        <div class="game_life dis_f">
+                            <div class="active"></div>
+                            <div class="active"></div>
+                            <div class="active"></div>
+                        </div>
+                        <p class = "score_text">0</p>
+
+                        <ul id = "game_cht">
+                        </ul>
+
+                    </div>
+
+                    <div class = "game_ctr dis_f flex_jc">
+                        <button id = "p01_btn" onclick="game_t1_ctr1('left')" style="background-color: green;"></button>
+                        <button id = "p01_btn" onclick="game_t1_ctr1('center')" style="background-color: orange;"></button>
+                        <button id = "p01_btn" onclick="game_t1_ctr1('right')" style="background-color: white;"></button>
+
+                    </div>
+                </div>
+
+                    <div class = 'layer1 dis_f flex_c' id = "game_over" style="display: none;">
+                        <div class = "popup_area t_c">
+                            <h3 class = "mb10">GAME OVER</h3>
+                            <P class = "mb10">점수 : <span class = "score_text">0</span></P>
+                            <button class="restart_btn">다시하기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="box_style1 dis_f al_c">
+            <p>
+                유사콜론<br/>
+                20210478_박성준 | 20210460_윤영준 | 20181060_김수형
+            </p>
+        </div>
+    </footer>
+
+    <div class="pop_gr pc_h"></div>
+</body>
